@@ -1,2 +1,4 @@
 # Change Log
-- 5/28 8:05p - added funtionality for filtering on time and size. Started work on the aggregates functions. Need to review time filtering
+
+- 5/28 - added funtionality for filtering on time and size. Started work on the aggregates functions. Need to review time filtering.
+- 5/29 - added aggregation functionality. Time filtering is fine as long as timestamp has been configured for the index.
