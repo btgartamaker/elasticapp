@@ -1,3 +1,5 @@
 config.yml
 elasticsearch-app.code-workspace
 .python-version
+docker-compose.yml
+.vscode/
