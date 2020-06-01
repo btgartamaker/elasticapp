@@ -55,17 +55,25 @@ else:
 
 def print_aggs(data, aggtype):
     if aggtype == "count":
-        print(data["hits"]["total"])
+        printable_data = data["hits"]["total"]
     elif aggtype == "median":
-        print(data["aggregations"]["2"]["values"]["50.0"])
+        printable_data = data["aggregations"]["2"]["values"]["50.0"]
     elif aggtype == "ninety":
-        print(data["aggregations"]["2"]["values"]["90.0"])
+        printable_data = data["aggregations"]["2"]["values"]["90.0"]
     elif aggtype == "ninety-five":
-        print(data["aggregations"]["2"]["values"]["95.0"])
+        printable_data = data["aggregations"]["2"]["values"]["95.0"]
     elif aggtype == "ninety-nine":
-        print(data["aggregations"]["2"]["values"]["99.0"])
+        printable_data = data["aggregations"]["2"]["values"]["99.0"]
     else:
-        print(data["aggregations"]["2"]["value"])
+        printable_data = data["aggregations"]["2"]["value"]
+    
+    #print(printable_data)
+
+    if printable_data == "NaN":
+        print("0")
+    else:
+        print(printable_data)
+
 
 def print_docs(data, filter):
   for f in data["hits"]["hits"]:
